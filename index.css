@@ -1,127 +1,224 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-    
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
+
 body {
-    background-image: url('pexels-fauxels-3184460.jpg');
+    font-family: 'Montserrat', sans-serif;
+    color: #3E2723;
+    background-color: #FFFFFF; 
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.55); 
+
+    /* background-color: rgba(34, 22, 20, 0.8);  */
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #D7CCC8; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li {
+    margin-left: 30px;
+}
+ul a {
+    text-decoration: none;
+    color: #F5F5F5; 
+    font-size: large;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    position: relative;
+}
+ul a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.5s ease 0s,left 0.5s ease 0s;
+    width: 0;
+  }
+ul a:hover:after { 
+    width: 100%;
+    left: 0; 
+}
+/* ul a {
+    text-decoration: none;
+    color: #F5F5F5; 
+    font-size: large;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+ul a:hover {
+    color: #FF9800; 
+} */
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #F5F5F5;
+}
+
+.main {
+    color: #FFFFFF;
+    height: 80vh;
+    padding: 120px 5% 80px;
+    text-align: center;
+    background-image: url('pexels-fauxels-3184460.jpg'); 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+}
+
+.main h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    margin-top: 10%;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4vh;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #FF9800; 
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    background-color: #F57C00;
+}
+/* #Moto{
+} */
+.about-us {
+    padding: 80px 5%;
+    background-color: #EFEBE9; 
+}
+
+.about-container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-}
-.container {
-    height: 100vh;
-    width: 100vw;
-}
-nav {
-    position: sticky;
-
-    border: 1px solid black; 
-    padding: 10px;
-}
-ul{
-margin:0;
-padding:0;
-display:flex;
-justify-content: center;
+    flex-wrap: wrap;
 }
 
-ul li{
-list-style:none;
-margin:0 20px;
-transition:0.5s;
+.about-container img {
+    border-radius: 10px;
+    max-width: 100%;
+    height:60vh;
+    flex: 1 1 400px;
+    margin-right: 40px;
 }
 
-ul li a{
-display: block;
-position:relative;
-text-decoration:none;
-padding:5px;
-font-weight: bold;
-font-size:19px;
-font-family: sans-serif;
-color:#0f0d0d;
-text-transform:uppercase;
-transition:0.5s;
-}
-.ace {
-margin-top: 300px;
-margin-left: 1020px;
-font-size: 75px;
-text-align: center;
-background: linear-gradient(to right, #000000 45%, #98655b);
--webkit-background-clip: text; /* For WebKit browsers */
-background-clip: text; /* Standard property */
-color: transparent; /* Makes the text itself transparent, showing the gradient */
-animation: slideIn 1.3s ease-out forwards;
-font-weight: 600;
-margin-bottom: 40px;
-position: relative;
-display: inline-block;
-overflow: hidden;
+.about-text {
+    flex: 1 1 400px;
+    color: #442a26; 
 }
 
-.ace::before {
-content: "";
-position: absolute;
-top: 0;
-left: -100%;
-width: 200%; /* Ensures the gradient covers the text as it moves */
-height: 100%;
-background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.7), transparent);
--webkit-background-clip: text; /* Applies gradient only to text */
-background-clip: text;
-color: transparent;
-transition: transform 1s ease;
-z-index: -1; /* Places it behind the text but within its bounds */
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-.ace:hover::before {
-transform: translateX(50%);
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-
-.motto {
-    margin-top: -45px;
-    font-size: 23px;
-    margin-left: 1028px;
-    /* /* text-align: center; */
-    overflow: hidden; 
-    white-space: nowrap;
-    border-right: 3px solid #000; 
-    width: 0;
-    animation: typing 3s steps(40) 1s forwards, blink 0.75s step-end infinite;
-}
-ul li a {
-color: #000000;
-font-size: 20px;
-text-decoration: none;
-padding: 10px 20px;
-margin: 0 5px;
-position: relative;
-display: inline-block;
-transition: all 0.5s;
+footer {
+    background-color: #3E2723; 
+    color: #F5F5F5;
+    padding: 20px 5%;
+    text-align: center;
 }
 
-@keyframes wiggle92 {
-0% { transform: translate(0px, 0px); }
-25% { transform: translate(2px, 2px); }
-50% { transform: translate(0px, 2px); }
-75% { transform: translate(2px, 0px); }
-100% { transform: translate(0px, 0px); }
+.footer-content p {
+    font-size: 14px;
 }
 
-ul li a:hover {
-animation: wiggle92 0.2s linear infinite;
+/*responsiveness*/
+@media screen and (max-width: 992px) {
+    .main h1 {
+        font-size: 48px;
+    }
+    .main p {
+        font-size: 20px;
+    }
 }
 
+@media screen and (max-width: 768px) {
+    ul {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: rgba(0, 0, 0, 0.55); 
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        width: 100%;
+        transition: height 0.3s ease;
+    }
+    ul.active {
+        height: calc(100vh - 60px);
+    }
+    ul li {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .about-container {
+        flex-direction: column;
+    }
+    .about-container img, .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
 @keyframes typing {
     from {
         width: 0;

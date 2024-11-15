@@ -3,21 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AceMyGPA - Your Path to Academic Excellence</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
-    <title>AceMyGPA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo.svg" alt="AceMyGPA Logo">
+                </a>
+            </div>
+            <ul id="nav-links">
                 <li><a href="#">GPA Calculator</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
+            <div class="mobile-menu-icon">
+                <span>&#9776;</span>
+            </div>
         </nav>
-        <div class="ace">AceMyGPA</div>
-        <div class="motto">Your Path to Academic Excellence.</div>
-    </div>
+    </header>
+    <main>
+        <section class="main">
+            <div class="main-content">
+                <h1>AceMyGPA</h1>
+                <p id="Moto">Your Path to Academic Excellence.</p>
+                <a href="#" class="cta-btn">Get Started</a>
+            </div>
+        </section>
+        <section class="about-us" id="about">
+            <div class="about-container">
+                <img src="https://happenings.lpu.in/wp-content/uploads/2024/09/Lovely-Professional-University-LPU-campus-1-scaled.jpg" alt="Lovely Professional University Campus">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>
+                        At AceMyGPA, we are dedicated to helping students achieve their academic goals. Our platform provides tools and resources designed to simplify your academic journey and enhance your learning experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; By Team ACEMYGPA</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
